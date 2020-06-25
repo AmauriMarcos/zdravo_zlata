@@ -1,8 +1,8 @@
 <template>
     <div class="navigation">
         <div class="brand">
-            <img src="../../public/img/serbjia.svg" alt="Serbia flag">
-            <p>Učim sa Zlatom</p> 
+            <img src="../../public/img/ser.svg" alt="Serbia flag">
+            <p>Uči Srpski</p> 
         </div>
         <ul class="list">
             <li>Home</li>
@@ -56,6 +56,10 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        & p {
+            font-size: 1.2rem;
+        }
     }
 
     .brand img{
