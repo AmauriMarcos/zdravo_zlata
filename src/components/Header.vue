@@ -22,6 +22,7 @@
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(3, 1fr);
         align-items: center;
+        border-right: 1px solid #ccc;
 
         &__icons{
             grid-column: 1/2; 
