@@ -19,7 +19,7 @@
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(3,1fr);
-        padding: 3% 0;
+        padding: 3% 0 0 0;
 
         &__square{
             grid-column: 5/9;
@@ -35,6 +35,7 @@
             grid-column: 3/6;
             grid-row: 1/-1;
             padding: 1rem;
+            height: 50%;
 
             & h3{
                 font-size: 3rem;

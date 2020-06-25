@@ -4,6 +4,7 @@
         <app-header></app-header>
         <app-about></app-about>
         <app-elements></app-elements>
+        <app-prices></app-prices>
     </div>
 </template>
 
@@ -11,14 +12,16 @@
 import Navigation from './components/Navigation.vue';
 import Header from './components/Header.vue';
 import About from './components/About.vue';
-import Elements from './components/Elements.vue'
+import Elements from './components/Elements.vue';
+import Prices from './components/Prices.vue'
 
 export default {
     components: {
         appNavigation: Navigation,
         appHeader: Header,
         appAbout: About,
-        appElements: Elements
+        appElements: Elements,
+        appPrices: Prices
     }
 }
 </script>
