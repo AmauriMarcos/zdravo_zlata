@@ -26,15 +26,18 @@
                 </form>
             </div>
             <div class="box2">
-                <div class="info">
-                    <div class="address">
-
+                <div class="infos">
+                    <div class="info info__address">
+                        <img src="../../public/img/map.svg" alt="icon map">
+                        <p>Bulevar Cara Konstantina, broj 7</p>
                     </div>
-                    <div class="phone">
-
+                    <div class="info info__phone">
+                        <img src="../../public/img/phone.svg" alt="icon phone">
+                        <p>+55 381 555 283</p>
                     </div>
-                    <div class="email">
-                        
+                    <div class="info info__email">
+                        <img src="../../public/img/mail.svg" alt="icon mail">
+                        <p>zlata.learn.servio@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -190,6 +193,32 @@
         background-position: center;
         display: flex;
         align-self: center;
-         /* background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8),  rgba($color-primary-dark, 0.8)) ,url("../img/hero.jpg"); */
+        justify-content: flex-start;
+         
+        & .infos{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto 0 auto;
+    
+            & .info{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: .4rem;
+
+                & img{
+                    width: .95rem;
+                    height: .95rem;
+                    margin-right: 1rem;
+                }
+
+                & p{
+                    color: rgb(250, 250, 250);
+
+                }
+                
+            }
+        }
     }
 </style>
