@@ -17,6 +17,25 @@
     </header>
 </template>
 <style lang="scss" scoped>
+
+    @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
+
 .header{
         display: grid;
         grid-template-columns: repeat(10, 1fr);
@@ -24,10 +43,51 @@
         align-items: center;
         border-right: 1px solid #ccc;
 
+        &__box{
+            grid-column: 8/10;
+            grid-row: 3/4;
+            width: 11rem;
+            height: 11rem;
+            transform: translateX(-4rem) translateY(-4rem);
+            background-color: rgb(16, 148, 153);
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;    
+            padding: 1rem;   
+            z-index: 55;
+            position: relative;
+
+            @include respond(tab-land){                    
+                width: 10rem;
+                height: 10rem;    
+                font-size: 1rem;                
+            }
+
+            @include respond(tab-port){                    
+                width: 9rem;
+                height: 9rem;  
+                font-size: .7rem; 
+                padding: 1rem;                 
+            }
+
+            @include respond(phone){                    
+                width: 5rem;
+                height: 5rem; 
+                font-size: .8rem;                   
+            }
+
+        }
+
         &__icons{
             grid-column: 1/2; 
             grid-row: 1/4;
-            justify-self: center;  
+            justify-self: center; 
+
+            @include respond(tab-land){
+                visibility: none;
+                opacity: 0;
+            }
+            
 
             &--social-medias{
                 display: flex;
@@ -47,26 +107,76 @@
             grid-column: 3/6;
             grid-row: 1/4;
 
+             
+
+             @include respond(tab-port){
+             /*    grid-column: 1/-1;
+                grid-row: 1/-1;
+                z-index: 15;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; */
+            }
+
+
             & p{
                 font-size: 1.3rem;
                 font-weight: 700;
+
+                @include respond(tab-land){
+                  font-size: 1rem;
+                }
             }
             
             & h1{
-                font-size: 100px;
+                font-size: 6.25rem;
                 font-weight: 400;
                 color: #06070f;
                 line-height: 100px;
                 margin-top: 3rem;
                 font-family: 'Montserrat', sans-serif;
+
+                @include respond(tab-land){
+                    font-size: 5.5rem;
+                    line-height: 1.2;
+                }
+
+                @include respond(tab-port){
+                    font-size: 4.5rem;
+                }
+
+                 @include respond(phone){
+                    grid-column: 1/5;
+                    font-size: 3rem;
+                    line-height: 1.2;
+                }
             }
 
             & h2{
-                font-size: 100px;
+                font-size: 6.25rem;
                 font-weight: 100;
                 color: #0e9794;
                 line-height: 100px;
                 font-family: 'Montserrat', sans-serif;
+
+                @include respond(tab-land){
+                    font-size: 5rem;
+                    line-height: 1.2;
+                 }
+
+                @include respond(tab-port){                    
+                    font-size: 3rem;
+                    line-height: 1.2;                
+                }
+
+                 @include respond(phone){
+                    grid-column: 1/5;
+                    font-size: 3rem;
+                    line-height: 1.2;
+                    
+                }
             }
         }
 
@@ -79,7 +189,23 @@
             background-position: center;
             height: 95vh;
             width: 130%;
-        }
+
+             @include respond(tab-port){
+               /*  grid-column: 1/-1;
+                background-image: linear-gradient(to right bottom, rgba(219, 216, 216, 0.8), rgba(255, 255, 255, 0.8)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
+                z-index: 5;
+                position: relative; */
+                grid-column: 7/-1;
+                z-index: 5;
+                position: relative;
+            }
+
+             @include respond(phone){
+                 grid-column: 6/-1;
+                  background-image: linear-gradient(to right bottom, rgba(219, 216, 216, 0.8), rgba(255, 255, 255, 0.8)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
+                z-index: 5;
+                position: relative;
+             }  
 
         &__textura{
             grid-column: 10/11;
@@ -91,39 +217,17 @@
             height: 95vh;
             width: 50%;
             justify-self: flex-end;
-        }
 
-        &__box{
-            grid-column: 8/10;
-            grid-row: 3/4;
-            width: 11rem;
-            height: 11rem;
-            transform: translateX(-4rem) translateY(-4rem);
-            background-color: rgb(16, 148, 153);
-            color: #fff;
-            font-weight: 600;
-            text-transform: uppercase;    
-            padding: 1rem;   
+            @include respond(tab-port){
+                /* visibility: none;
+                opacity: 0; */
+            }
 
         }
+
+        
     }
 
-    @mixin respond($breakpoint){
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em){ @content }; //600px
-    }
-
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em){ @content }; //900px
-    }
-
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em){ @content }; //1200px
-    }
-
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em){ @content }; // + 1800px
-    }
 }
  /* @include respond(tab-port){
             top: 50%;
