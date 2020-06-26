@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <section id="prices">
         <h2 class="title">Princing Options</h2>
         <div class="prices">
             <div class="card card-1">
@@ -31,16 +31,19 @@
             </div>
 
         </div>
-    </div>
+    </section>
     
 </template>
 
 <style lang="scss" scoped>
+    #prices{
+        padding: 5% 7%;
+    }
     .prices{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 2rem;
-        padding: 3% 7%;
+       padding: 2% 0;
     }
     .title{
 

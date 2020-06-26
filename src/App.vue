@@ -5,6 +5,7 @@
         <app-about></app-about>
         <app-elements></app-elements>
         <app-prices></app-prices>
+        <app-customers></app-customers>
     </div>
 </template>
 
@@ -13,7 +14,8 @@ import Navigation from './components/Navigation.vue';
 import Header from './components/Header.vue';
 import About from './components/About.vue';
 import Elements from './components/Elements.vue';
-import Prices from './components/Prices.vue'
+import Prices from './components/Prices.vue';
+import Customers from './components/Customers.vue';
 
 export default {
     components: {
@@ -21,7 +23,8 @@ export default {
         appHeader: Header,
         appAbout: About,
         appElements: Elements,
-        appPrices: Prices
+        appPrices: Prices,
+        appCustomers: Customers
     }
 }
 </script>
