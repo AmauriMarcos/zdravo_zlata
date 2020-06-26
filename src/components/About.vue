@@ -1,19 +1,24 @@
 <template>
-    <div class="about">
-        <div class="about__content">
-            <div class="about__content--left">
-                <img src="../../public/img/mygirl.png" alt="" >
-            </div>  
-            <div class="about__content--right">
-                <h2>About me</h2>
-                <p>Hello, my name is Zlata, I live in the city of Nis in Serbia and I have a degree in Serbian literature. I love teaching and I also like all star, skate and good music. It will be a pleasure to help you to learn the Serbian language. <span>Ready to start?</span></p>
-                <button>Send a message <span>&rarr;</span> </button>
+   <section id="about">
+        <div class="about">
+            <div class="about__content">
+                <div class="about__content--left">
+                    <img src="../../public/img/mygirl.png" alt="" >
+                </div>  
+                <div class="about__content--right">
+                    <h2>About me</h2>
+                    <p>Hello, my name is Zlata, I live in the city of Nis in Serbia and I have a degree in Serbian literature. I love teaching and I also like all star, skate and good music. It will be a pleasure to help you to learn the Serbian language. <span>Ready to start?</span></p>
+                    <button>Send a message <span>&rarr;</span> </button>
+                </div>
             </div>
         </div>
-    </div>
+   </section>
 </template>
 
 <style lang="scss" scoped>
+    #about{
+        padding: 5% 0 0 0;
+    }
     .about{
         display: grid;
         grid-template-columns: repeat(10, 1fr);

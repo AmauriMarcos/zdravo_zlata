@@ -5,7 +5,7 @@
         <app-about></app-about>
         <app-elements></app-elements>
         <app-prices></app-prices>
-        <app-customers></app-customers>
+        <app-testimonials></app-testimonials>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ import Header from './components/Header.vue';
 import About from './components/About.vue';
 import Elements from './components/Elements.vue';
 import Prices from './components/Prices.vue';
-import Customers from './components/Customers.vue';
+import Testimonials from './components/Testimonials.vue';
 
 export default {
     components: {
@@ -24,7 +24,7 @@ export default {
         appAbout: About,
         appElements: Elements,
         appPrices: Prices,
-        appCustomers: Customers
+        appTestimonials: Testimonials
     }
 }
 </script>
