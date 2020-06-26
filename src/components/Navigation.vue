@@ -23,7 +23,7 @@ export default {
     .navigation{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        background-color: #06070f;
+        background-color: rgba(0,0,0,.8);
         height: 4rem;
         padding: 1.5rem;
         justify-content: center;

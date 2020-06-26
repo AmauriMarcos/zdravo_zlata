@@ -7,6 +7,7 @@
         <app-prices></app-prices>
         <app-testimonials></app-testimonials>
         <app-contact></app-contact>
+        <app-footer></app-footer>
     </div>
 </template>
 
@@ -18,6 +19,7 @@ import Elements from './components/Elements.vue';
 import Prices from './components/Prices.vue';
 import Testimonials from './components/Testimonials.vue';
 import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 
 export default {
     components: {
@@ -27,7 +29,8 @@ export default {
         appElements: Elements,
         appPrices: Prices,
         appTestimonials: Testimonials,
-        appContact: Contact
+        appContact: Contact,
+        appFooter: Footer
     }
 }
 </script>

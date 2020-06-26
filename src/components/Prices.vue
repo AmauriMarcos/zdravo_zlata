@@ -38,6 +38,7 @@
 <style lang="scss" scoped>
     #prices{
         padding: 5% 7%;
+        background-color: rgb(247, 247, 247);
     }
     .prices{
         display: grid;
@@ -64,7 +65,7 @@
             box-shadow: 3px 3px 10px rgba(0,0,0,.2);
 
             &-1{
-                /* grid-column: 2/5; */
+                background-color: rgb(255,255, 255);
                 
             }
 
@@ -76,7 +77,7 @@
             }
 
             &-3{
-               /*  grid-column: 8/11; */
+                background-color: rgb(255,255, 255);
             }
 
             & h3{

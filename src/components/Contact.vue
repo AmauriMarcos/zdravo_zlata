@@ -47,7 +47,7 @@
 
 <style lang="scss" scoped>
     #contact{
-        padding: 5% 13%;
+        padding: 7% 13%;
         background-color: rgb(247, 247, 247);
     }
 
@@ -215,7 +215,6 @@
 
                 & p{
                     color: rgb(250, 250, 250);
-
                 }
                 
             }

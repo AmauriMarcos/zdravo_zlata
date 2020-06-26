@@ -3,7 +3,7 @@
         <div class="header__icons">
             <div class="header__icons--social-medias">
                 <img src="../../public/img/facebook.svg" alt="facebook icon">
-                <img src="../../public/img/instagram.svg" alt="instagram icon">
+                <img src="../../public/img/instagram2.svg" alt="instagram icon">
             </div>        
         </div>
         <div class="header__title">
@@ -35,8 +35,8 @@
 
                  & img{
                     justify-self: center;
-                    width: 1.2rem;
-                    height: 1.2em;
+                    width: 1.5rem;
+                    height: 1.5rem;
                     margin: 1.3rem .5rem;
                  } 
             }
