@@ -28,10 +28,31 @@
 </template>
 
 <style lang="scss" scoped>
+    @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
 
     #testimonials{
         padding: 5% 7%;
         background-color: rgb(175, 232, 215);
+
+        @include respond(phone){
+            padding: 5% 10%;    
+        }
     }
 
     .customers{
@@ -45,6 +66,11 @@
         text-align: center;
         font-size: 4rem;
         font-weight: 100;
+
+        @include respond(phone){
+            font-size: 1.9rem;
+            margin: 2rem 0;
+        }
     }
 
     .testimonial{
@@ -53,6 +79,10 @@
         border-radius: 5px;
         box-shadow: 2px 7px 25px rgba(0,0,0,.2);
         background-color: rgb(255, 250, 250);
+
+        @include respond(phone){
+            padding: 2rem 1rem 1rem 1rem;    
+        }
         
         &__text{
             line-height: 1.5rem;
@@ -60,11 +90,19 @@
             font-weight: 300;
             text-align: center;
 
+            @include respond(phone){
+                font-size: .85rem;   
+            }
+
             &::before{
                 content: "\201C";
                 display: block;
                 font-size: 5rem;
                 color: #17909b;
+
+                @include respond(phone){
+                    font-size: 4rem;
+                }       
             }
 
              &::after{
@@ -84,6 +122,11 @@
             border-radius: 50%;
             background-color: chocolate;
             margin: 1rem auto;   
+
+            @include respond(phone){
+                 width: 55px;
+                 height: 55px;  
+             }
 
             & img{
                 border-radius: 50%;

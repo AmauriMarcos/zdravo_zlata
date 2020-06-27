@@ -17,8 +17,31 @@
 </template>
 
 <style lang="scss" scoped>
+
+    @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
+
     #elements{
         padding: 5% 0;
+
+        @include respond(phone){
+            padding: 20% 0;
+        }
     }
     .elements{
         display: grid;
@@ -35,6 +58,12 @@
             opacity: 0.2;
             z-index: 5;
             position: relative;
+
+            @include respond(phone){
+                width: 21.9rem;
+                height: 25rem;
+                grid-column: 2/-1;
+            }
             
         }
 
@@ -44,6 +73,11 @@
             padding: 1rem;
             height: 50%;
 
+            @include respond(phone){
+                grid-column: 2/-1;
+                margin-top: 3rem;
+            }
+
 
             & h3{
                 width: 100%;
@@ -51,10 +85,18 @@
                 font-weight: 200;
                 line-height: 1.3;
                 margin-bottom: 2rem;
+
+                 @include respond(phone){
+                    font-size: 1.7rem;
+                }
             }
 
             & p{
                 font-size: 1.4rem;
+
+                @include respond(phone){
+                    font-size: 1rem;
+                }
             }
         }
 
@@ -64,6 +106,14 @@
             width: 17rem;
             height: 17rem;
             transform: translateX(3rem) translateY(10);
+
+            @include respond(phone){
+                width: 10rem;
+                height: 10rem;
+                transform: translateX(.5rem) translateY(5rem);
+                z-index: 55;
+                position: relative;
+            }
 
             & img{
                 object-fit: cover;

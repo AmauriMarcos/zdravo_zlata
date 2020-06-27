@@ -36,15 +36,37 @@
 </template>
 
 <style lang="scss" scoped>
+      @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
+
     #prices{
         padding: 5% 7%;
         background-color: rgb(247, 247, 247);
+
+         @include respond(phone){
+            padding: 15% 7%;
+        }
     }
     .prices{
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 2rem;
-       padding: 2% 0;
+       padding: 2% 5%;
     }
     .title{
 
@@ -52,6 +74,10 @@
         font-size: 4rem;
         font-weight: 100;
         margin-bottom: 1.8rem;
+
+        @include respond(phone){
+            font-size: 2.5rem;
+        }
     
     }   
     .card{
@@ -63,6 +89,10 @@
             flex-direction: column;
             text-align: center;
             box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+
+            @include respond(phone){
+                 padding:  2rem 1rem;
+             }
 
             &-1{
                 background-color: rgb(255,255, 255);
@@ -83,11 +113,18 @@
             & h3{
                 font-weight: 700;
                 font-size: 3rem;
-                 margin: 2.5rem;          
+                margin: 2.5rem; 
+
+                @include respond(phone){
+                    font-size: 2rem;
+                }         
             }
 
             & h4{
-                text-transform: uppercase;             
+                text-transform: uppercase;    
+                @include respond(phone){
+                    font-size: .9rem;
+                }            
             }
 
             & h4:after{
@@ -102,6 +139,10 @@
 
             & p{
                 margin: .5rem;
+
+                @include respond(phone){
+                    font-size: .9rem;
+                }   
             }
 
             & .final:after{
@@ -111,6 +152,10 @@
                 margin: 2rem auto;
                 display: block;
                 background-color: #06070f;
+
+                @include respond(phone){
+                    height: 3px;
+                } 
             }   
 
 

@@ -46,9 +46,27 @@
 </template>
 
 <style lang="scss" scoped>
+    @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
+
     #contact{
-        padding: 7% 13%;
-        background-color: rgb(247, 247, 247);
+        padding: 7% 0;
+        background-color: rgb(247, 247, 247);    
     }
 
      .title{
@@ -56,6 +74,11 @@
         font-size: 4rem;
         font-weight: 100;
         margin-bottom: 1.8rem; 
+
+        @include respond(phone){
+            font-size: 1.9rem;
+            margin: 2rem 0;
+        }
     }  
 
     .message{
@@ -70,6 +93,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: left;
+
+         @include respond(phone){
+            visibility: none;
+            opacity: 0;
+        }
        
 
         & p {
@@ -101,6 +129,12 @@
         display: flex;
         justify-content: center;
         margin-top: 5rem;
+
+        @include respond(phone){
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            justify-items: center;
+        }
     }
 
     .box1{
@@ -111,6 +145,12 @@
         border-radius: 5px;
         box-shadow: 3px 3px 22px rgba(32,32,32,.3);
         background-color: #fff;
+
+         @include respond(phone){
+              grid-column: 2/4 ;
+              grid-row: 2/3; 
+              transform: translateY(-3rem);
+        }
        
 
         & h3{
@@ -194,6 +234,12 @@
         display: flex;
         align-self: center;
         justify-content: flex-start;
+
+        @include respond(phone){
+            width: 100%;
+            grid-column: 1/-1 ;
+            grid-row: 1/2; 
+        }
          
         & .infos{
             display: flex;

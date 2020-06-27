@@ -16,6 +16,24 @@
 </template>
 
 <style lang="scss" scoped>
+    @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
+    
     #about{
         padding: 5% 0 0 0;
     }
@@ -31,22 +49,50 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             padding: 3% 0;
+
+             @include respond(phone){
+                 grid-column: 1/-1;
+            } 
             &--left{
                 
-
+                 @include respond(phone){
+                         display: flex;
+                         justify-content: center;
+                         align-items: center;
+                     } 
+                
                 & img{
                     width: 30rem;
                     transform: translateX(3rem);
+
+                     @include respond(phone){
+                         width: 15rem;
+                         /* margin: 1rem auto;
+                         transform: translateX(6rem); */
+                         transform: translateX(0);
+                     } 
                 }
             }
 
             &--right{
                 width: 400px;
 
+                    @include respond(phone){
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 100%;
+                    }
+
                 & p{
                     font-size: 1.4rem;
                     line-height: 1.7;
                     font-weight: 300;
+
+                    @include respond(phone){
+                        font-size: 1rem;
+                        padding: 0 3rem 1rem 3rem;
+                    } 
 
                     & span{
                         font-weight: 400;
@@ -57,6 +103,12 @@
                     font-size: 4rem;
                     font-weight: 100;
                     margin-bottom: 1.8rem;
+
+                    @include respond(phone){
+                        font-size: 2.5rem;
+                        margin: 2rem;
+                        text-align: center;
+                    } 
                 }
 
                 & button{
@@ -70,6 +122,12 @@
                     outline: none;
                     margin-top: 2rem;
                     cursor: pointer;
+
+                    @include respond(phone){
+                        font-size: .8rem;
+                        padding: .8rem 1.2rem;
+                        margin: 2rem auto;
+                    }
 
                     & span{
                         margin-left: .3rem;

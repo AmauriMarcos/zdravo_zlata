@@ -43,6 +43,26 @@
         align-items: center;
         border-right: 1px solid #ccc;
 
+         &__textura{
+            grid-column: 10/11;
+            grid-row: 1/4;
+            background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/bush.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 95vh;
+            width: 50%;
+            justify-self: flex-end;
+            z-index: 55;
+            position: relative;
+
+            @include respond(phone){
+                visibility: none;
+                opacity: 0;
+            }
+
+        }
+
         &__box{
             grid-column: 8/10;
             grid-row: 3/4;
@@ -71,9 +91,8 @@
             }
 
             @include respond(phone){                    
-                width: 5rem;
-                height: 5rem; 
-                font-size: .8rem;                   
+                visibility: none;
+                opacity: 0;                
             }
 
         }
@@ -109,15 +128,14 @@
 
              
 
-             @include respond(tab-port){
-             /*    grid-column: 1/-1;
-                grid-row: 1/-1;
+             @include respond(phone){
+                grid-column: 1/-1;
                 z-index: 15;
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column; */
+                flex-direction: column;
             }
 
 
@@ -127,6 +145,11 @@
 
                 @include respond(tab-land){
                   font-size: 1rem;
+                }
+
+                @include respond(phone){                    
+                    font-size: .9rem;       
+                    color: rgb(245, 245, 245);       
                 }
             }
             
@@ -151,6 +174,10 @@
                     grid-column: 1/5;
                     font-size: 3rem;
                     line-height: 1.2;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: rgb(245, 245, 245);
+                    
                 }
             }
 
@@ -173,9 +200,13 @@
 
                  @include respond(phone){
                     grid-column: 1/5;
-                    font-size: 3rem;
+                    font-size: 2.3rem;
+                    font-weight: 400;
                     line-height: 1.2;
-                    
+                    color: rgb(175, 232, 215);
+                    background-color: rgba(235, 235, 235, 0.2);
+                    margin-top: 2rem;
+                    padding: 1rem 1.4rem;
                 }
             }
         }
@@ -195,35 +226,19 @@
                 background-image: linear-gradient(to right bottom, rgba(219, 216, 216, 0.8), rgba(255, 255, 255, 0.8)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
                 z-index: 5;
                 position: relative; */
-                grid-column: 7/-1;
+                grid-column: 7/10;
                 z-index: 5;
                 position: relative;
             }
 
              @include respond(phone){
-                 grid-column: 6/-1;
-                  background-image: linear-gradient(to right bottom, rgba(219, 216, 216, 0.8), rgba(255, 255, 255, 0.8)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
+                 grid-column: 1/10;
+                  background-image: linear-gradient(to right bottom, rgba(14, 13, 13, 0.9), rgba(2, 1, 1, 0.8)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
                 z-index: 5;
                 position: relative;
              }  
 
-        &__textura{
-            grid-column: 10/11;
-            grid-row: 1/4;
-            background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/bush.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 95vh;
-            width: 50%;
-            justify-self: flex-end;
-
-            @include respond(tab-port){
-                /* visibility: none;
-                opacity: 0; */
-            }
-
-        }
+       
 
         
     }
