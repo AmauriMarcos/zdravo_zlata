@@ -59,6 +59,10 @@
             z-index: 5;
             position: relative;
 
+            @include respond(tab-land){
+                    grid-column: 2/6;
+             }
+
             @include respond(phone){
                 width: 21.9rem;
                 height: 25rem;
@@ -73,6 +77,11 @@
             padding: 1rem;
             height: 50%;
 
+            @include respond(tab-land){
+             grid-column: 2/8;
+           
+        }
+
             @include respond(phone){
                 grid-column: 2/-1;
                 margin-top: 3rem;
@@ -85,6 +94,11 @@
                 font-weight: 200;
                 line-height: 1.3;
                 margin-bottom: 2rem;
+
+                @include respond(tab-land){
+                    font-size: 2.5rem;
+                
+                }
 
                  @include respond(phone){
                     font-size: 1.7rem;

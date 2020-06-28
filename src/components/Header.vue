@@ -80,7 +80,8 @@
             @include respond(tab-land){                    
                 width: 10rem;
                 height: 10rem;    
-                font-size: 1rem;                
+                font-size: 1rem;   
+                transform: translateX(-8rem) translateY(-2rem);             
             }
 
             @include respond(tab-port){                    
@@ -154,12 +155,16 @@
             }
             
             & h1{
-                font-size: 6.5rem;
+                font-size: 6.25rem;
                 font-weight: 400;
-                color: #001eff;
+                color: #06070f;
                 line-height: 100px;
                 margin-top: 3rem;
                 font-family: 'Montserrat', sans-serif;
+
+                @include respond(big-desktop){
+                    font-size: 7rem;
+                }
 
                 @include respond(tab-land){
                     font-size: 5.5rem;
@@ -182,11 +187,15 @@
             }
 
             & h2{
-                font-size: 6.5rem;
+                font-size: 6.25rem;
                 font-weight: 100;
                 color: #0e9794;
                 line-height: 100px;
                 font-family: 'Montserrat', sans-serif;
+
+                 @include respond(big-desktop){
+                    font-size: 7rem;
+                }
 
                 @include respond(tab-land){
                     font-size: 5rem;

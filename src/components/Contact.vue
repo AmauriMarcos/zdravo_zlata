@@ -75,6 +75,10 @@
         font-weight: 100;
         margin-bottom: 1.8rem; 
 
+        @include respond(tab-land){
+             font-size: 3rem; 
+        }
+
         @include respond(phone){
             font-size: 1.9rem;
             margin: 2rem 0;
@@ -145,6 +149,11 @@
         border-radius: 5px;
         box-shadow: 3px 3px 22px rgba(32,32,32,.3);
         background-color: #fff;
+
+        @include respond(tab-land){
+             width: 28rem;
+           
+        }
 
          @include respond(phone){
               grid-column: 2/4 ;
@@ -261,6 +270,10 @@
 
                 & p{
                     color: rgb(250, 250, 250);
+
+                    @include respond(tab-land){
+                        font-size: .8rem;
+                    }
                 }
                 
             }

@@ -50,6 +50,12 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             padding: 3% 0;
 
+            @include respond(tab-land){
+                grid-column: 1/-1;
+                display: flex;
+                align-items: center;
+            }
+
              @include respond(phone){
                  grid-column: 1/-1;
             } 
@@ -65,6 +71,11 @@
                     width: 30rem;
                     transform: translateX(3rem);
 
+                    @include respond(tab-land){
+                        width: 20rem;
+                        transform: translateX(1rem);
+                    }
+
                      @include respond(phone){
                          width: 15rem;
                          /* margin: 1rem auto;
@@ -77,6 +88,11 @@
             &--right{
                 width: 400px;
 
+                @include respond(tab-land){
+                    padding: 2rem;
+                        
+                }
+
                     @include respond(phone){
                         display: flex;
                         justify-content: center;
@@ -88,6 +104,10 @@
                     font-size: 1.4rem;
                     line-height: 1.7;
                     font-weight: 300;
+
+                    @include respond(tab-land){
+                        font-size: 1.2rem;
+                    }
 
                     @include respond(phone){
                         font-size: 1rem;
@@ -103,6 +123,10 @@
                     font-size: 4rem;
                     font-weight: 100;
                     margin-bottom: 1.8rem;
+
+                    @include respond(tab-land){
+                        font-size: 3rem;                    
+                    }
 
                     @include respond(phone){
                         font-size: 2.5rem;
@@ -122,6 +146,12 @@
                     outline: none;
                     margin-top: 2rem;
                     cursor: pointer;
+
+                    @include respond(tab-land){
+                        padding: 1.2rem 2rem;
+                        font-size: .85rem;
+                    
+                    }
 
                     @include respond(phone){
                         font-size: .8rem;

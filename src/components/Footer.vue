@@ -47,6 +47,11 @@
             font-size: 1rem;
             margin: 1rem;
 
+            @include respond(tab-land){
+              font-size: .9rem;
+           
+             }
+
             @include respond(phone){
                 font-size: .75rem;
                 

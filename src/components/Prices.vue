@@ -64,9 +64,18 @@
     }
     .prices{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
         padding: 2% 5%;
+        
+
+         @include respond(tab-land){
+           /*   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  */
+             padding: 2% 15%;      
+             display: flex;
+             flex-direction: column;
+           
+        }
     }
     .title{
 
@@ -74,6 +83,11 @@
         font-size: 4rem;
         font-weight: 100;
         margin-bottom: 1.8rem;
+
+        @include respond(tab-land){
+             font-size: 3rem;
+             margin: 2rem 0;
+        }
 
         @include respond(phone){
             font-size: 2.5rem;
@@ -89,6 +103,11 @@
             flex-direction: column;
             text-align: center;
             box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+
+            @include respond(tab-land){
+             margin-bottom: 3rem;
+           
+        }
 
             @include respond(phone){
                  padding:  2rem 1rem;
@@ -112,7 +131,7 @@
 
             & h3{
                 font-weight: 700;
-                font-size: 3rem;
+                font-size: 2.7rem;
                 margin: 2.5rem; 
 
                 @include respond(phone){

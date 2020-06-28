@@ -60,12 +60,27 @@
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 2rem;
         padding: 3% 0;
+
+         
+         @include respond(tab-land){
+             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+             padding: 2% 15%;      
+             display: flex;
+             flex-direction: column;         
+        }
     }
 
     .title{
         text-align: center;
         font-size: 4rem;
         font-weight: 100;
+
+        
+         @include respond(tab-land){
+             font-size: 3rem;
+             margin-bottom: 2rem;
+           
+        }
 
         @include respond(phone){
             font-size: 1.9rem;
@@ -79,6 +94,11 @@
         border-radius: 5px;
         box-shadow: 2px 7px 25px rgba(0,0,0,.2);
         background-color: rgb(255, 250, 250);
+
+        @include respond(tab-land){
+             margin-bottom: 2rem;
+           
+        }
 
         @include respond(phone){
             padding: 2rem 1rem 1rem 1rem;    
