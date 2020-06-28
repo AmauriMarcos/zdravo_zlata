@@ -58,6 +58,7 @@
 
              @include respond(phone){
                  grid-column: 1/-1;
+                 display: grid;
             } 
             &--left{
                 
@@ -93,12 +94,11 @@
                         
                 }
 
-                    @include respond(phone){
-                        display: flex;
-                        justify-content: center;
-                        flex-direction: column;
-                        width: 100%;
-                    }
+                @include respond(phone){
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%
+                }
 
                 & p{
                     font-size: 1.4rem;

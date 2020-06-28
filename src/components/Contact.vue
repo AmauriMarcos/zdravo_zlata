@@ -159,6 +159,7 @@
               grid-column: 2/4 ;
               grid-row: 2/3; 
               transform: translateY(-3rem);
+              width: 21.87rem;
         }
        
 

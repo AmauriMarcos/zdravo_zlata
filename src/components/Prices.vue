@@ -76,6 +76,10 @@
              flex-direction: column;
            
         }
+
+        @include respond(phone){
+            padding: 2% 6%;
+        }
     }
     .title{
 
@@ -90,7 +94,7 @@
         }
 
         @include respond(phone){
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
     
     }   
