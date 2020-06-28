@@ -154,9 +154,9 @@
             }
             
             & h1{
-                font-size: 6.25rem;
+                font-size: 6.5rem;
                 font-weight: 400;
-                color: #06070f;
+                color: #001eff;
                 line-height: 100px;
                 margin-top: 3rem;
                 font-family: 'Montserrat', sans-serif;
@@ -182,7 +182,7 @@
             }
 
             & h2{
-                font-size: 6.25rem;
+                font-size: 6.5rem;
                 font-weight: 100;
                 color: #0e9794;
                 line-height: 100px;
