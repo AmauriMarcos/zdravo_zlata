@@ -36,6 +36,27 @@ export default {
 </script>
 
 <style lang="scss">
+
+
+    @mixin respond($breakpoint){
+        @if $breakpoint == phone {
+            @media only screen and (max-width: 37.5em){ @content }; //600px
+        }
+
+        @if $breakpoint == tab-port {
+            @media only screen and (max-width: 62.5em){ @content }; //1000px
+        }
+
+        @if $breakpoint == tab-land {
+            @media only screen and (max-width: 75em){ @content }; //1200px
+        }
+
+        @if $breakpoint == big-desktop {
+            @media only screen and (min-width: 112.5em){ @content }; // + 1800px
+        }
+    }
+
+
     *{
         margin: 0;
         padding: 0;
@@ -44,7 +65,14 @@ export default {
 
     html{
         font-family: 'Montserrat', sans-serif;
+
+        @include respond(phone){
+            width: 100%;      
+        }
     }
-    
+
+    html, body {
+          overflow-x:hidden;
+    }
     
 </style>
