@@ -50,9 +50,15 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             padding: 3% 0;
 
+            @include respond(tab-port){
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+
             @include respond(tab-land){
                 grid-column: 1/-1;
-                display: flex;
+                /* display: flex; */
                 align-items: center;
             }
 
@@ -61,6 +67,11 @@
                  display: grid;
             } 
             &--left{
+
+                @include respond(tab-land){
+                    display: flex;
+                    justify-content: center;
+                }
                 
                  @include respond(phone){
                          display: flex;
