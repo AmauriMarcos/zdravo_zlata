@@ -21,6 +21,10 @@
             @media only screen and (max-width: 37.5em){ @content }; //600px
         }
 
+        @if $breakpoint == pre-phone {
+            @media only screen and (max-width: 40em){ @content }; //640px
+        }
+
         @if $breakpoint == tab-port {
             @media only screen and (max-width: 62.5em){ @content }; //1000px
         }
@@ -61,6 +65,8 @@
                 /* display: flex; */
                 align-items: center;
             }
+
+             
 
              @include respond(phone){
                  grid-column: 1/-1;
@@ -104,6 +110,10 @@
                     padding: 2rem;
                         
                 }
+
+                 @include respond(pre-phone){
+                     padding: 0;
+                } 
 
                 @include respond(phone){
                     display: flex;
