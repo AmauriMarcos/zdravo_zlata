@@ -6,7 +6,7 @@
                 <img src="../../public/img/instagram2.svg" alt="instagram icon">
             </div>        
         </div>
-        <div class="header__title">
+        <div class="header__title" v-scrollanimation>
             <p>Online Course</p>
             <h1>Zdravo.</h1>
             <h2>Ja sam Zlata</h2>
@@ -17,6 +17,16 @@
     </header>
 </template>
 <style lang="scss" scoped>
+    .before-enter{
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+    }
+
+    .enter{
+        opacity: 1;
+        transform: translateX(0);
+    }
 
     @mixin respond($breakpoint){
         @if $breakpoint == phone {
@@ -76,6 +86,7 @@
             padding: 1rem;   
             z-index: 55;
             position: relative;
+            
 
             @include respond(tab-land){                    
                 width: 10rem;

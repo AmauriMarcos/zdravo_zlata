@@ -2,10 +2,10 @@
    <section id="about">
         <div class="about">
             <div class="about__content">
-                <div class="about__content--left">
+                <div class="about__content--left ">
                     <img src="../../public/img/mygirl.png" alt="" >
                 </div>  
-                <div class="about__content--right">
+                <div class="about__content--right" v-scrollanimation>
                     <h2>About me</h2>
                     <p>Hello, my name is Zlata, I live in the city of Nis in Serbia and I have a degree in Serbian literature. I love teaching and I also like all star, skate and good music. It will be a pleasure to help you to learn the Serbian language. <span>Ready to start?</span></p>
                     <button>Send a message <span>&rarr;</span> </button>
@@ -16,6 +16,19 @@
 </template>
 
 <style lang="scss" scoped>
+
+.before-enter {
+  opacity: 0;
+  transform: translateY(15rem);
+  transition: all 1s cubic-bezier(0,-0.1,0,1.28);
+}
+
+.enter{
+    opacity: 1;
+    transform: translateY(0rem);
+
+}
+
     @mixin respond($breakpoint){
         @if $breakpoint == phone {
             @media only screen and (max-width: 37.5em){ @content }; //600px

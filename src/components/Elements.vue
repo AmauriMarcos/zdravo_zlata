@@ -5,11 +5,11 @@
 
             </div>
             <div class="elements__phrase">
-                <h3>Tell me and I forget. Teach me and I remember. Involve me and I learn.</h3>
-                <p>&#8212; Benjamin Franklin</p>
+                <h3 v-scrollanimation>Tell me and I forget. Teach me and I remember. Involve me and I learn.</h3>
+                <p v-scrollanimation>&#8212; Benjamin Franklin</p>
             </div>
 
-            <div class="elements__photo">
+            <div class="elements__photo" v-scrollanimation>
                 <img src="https://scontent.fbeg7-1.fna.fbcdn.net/v/t1.15752-9/105519888_1049727992088147_1053918515766314422_n.jpg?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=G-NWGe4jX4sAX8LL6VD&_nc_ht=scontent.fbeg7-1.fna&oh=b74d145269a2cb257618029434d435dc&oe=5F1A22E3" alt="">
             </div>
        </div>
@@ -17,6 +17,8 @@
 </template>
 
 <style lang="scss" scoped>
+
+    
 
     @mixin respond($breakpoint){
         @if $breakpoint == phone {
@@ -34,6 +36,19 @@
         @if $breakpoint == big-desktop {
             @media only screen and (min-width: 112.5em){ @content }; // + 1800px
         }
+    }
+
+    .before-enter {
+        opacity: 0;
+        transform: scale(.5);
+        transition: all 1s cubic-bezier(0,-0.1,0,1.28);
+      
+    }
+
+    .enter{
+        opacity: 1;
+        transform: scale(1);
+
     }
 
     #elements{
@@ -120,6 +135,7 @@
             width: 17rem;
             height: 17rem;
             transform: translateX(3rem) translateY(10);
+            z-index: 55;
 
             @include respond(phone){
                 width: 10rem;

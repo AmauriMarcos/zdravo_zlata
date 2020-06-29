@@ -2,7 +2,7 @@
     <section id="prices">
         <h2 class="title">Princing Options</h2>
         <div class="prices">
-            <div class="card card-1">
+            <div class="card card-1" v-scrollanimation>
                 <h4>Student</h4>               
                 <h3>$ 9.99</h3>
                 <p>Some Amazing feature</p>
@@ -11,7 +11,7 @@
                 <p class="final">Final One</p>
             </div>
 
-            <div class="card card-2">
+            <div class="card card-2" v-scrollanimation>
                 <div class="ribbon"><span>BEST</span></div>
                 <h4>Professional</h4>               
                 <h3>$ 19.99</h3>
@@ -21,7 +21,7 @@
                 <p class="final">Final One</p>
             </div>
 
-            <div class="card card-3">
+            <div class="card card-3" v-scrollanimation>
                 <h4>Master</h4>                
                 <h3>$ 49.99</h3>
                 <p>Some Amazing feature</p>
@@ -36,6 +36,19 @@
 </template>
 
 <style lang="scss" scoped>
+
+    .before-enter{
+        opacity: 0;
+        transition: all 1s ;
+        transform: rotateX(90deg);
+    }
+
+    .enter{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+
+
       @mixin respond($breakpoint){
         @if $breakpoint == phone {
             @media only screen and (max-width: 37.5em){ @content }; //600px

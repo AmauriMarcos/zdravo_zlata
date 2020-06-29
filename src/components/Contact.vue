@@ -5,7 +5,7 @@
             <div class="message">
                 <p><span class="main-color">Let's</span> <span class="main-color">learn</span> <span>Serbian</span></p>
             </div>
-            <div class="box1">
+            <div class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
                 <form action="" method="" class="form">
                     <ul>
@@ -46,6 +46,18 @@
 </template>
 
 <style lang="scss" scoped>
+
+    .before-enter{
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: all 1s cubic-bezier(.41,.01,.57,1.89);
+    }
+
+    .enter{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     @mixin respond($breakpoint){
         @if $breakpoint == phone {
             @media only screen and (max-width: 37.5em){ @content }; //600px

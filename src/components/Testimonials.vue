@@ -2,21 +2,21 @@
     <section id="testimonials">
         <h2 class="title">What they say about me</h2>
         <div class="customers">
-            <bloquote class="testimonial">
+            <bloquote class="testimonial" v-scrollanimation>
                 <q class='testimonial__text'>Excellent teacher. Patient and dedicated to the student. Zlata encourages students but always respecting their limits.</q>
                 <div class="testimonial__photo">
                     <img src="https://i.ytimg.com/vi/cYNlJYQI3Uw/maxresdefault.jpg" alt="">
                 </div>
                  <p class="testimonial__name">Amauri Santos</p>
             </bloquote>
-            <bloquote class="testimonial">
+            <bloquote class="testimonial" v-scrollanimation>
                 <q class='testimonial__text'>What can I say? Zlata is one of those people you want to be around. Intelligent and charismatic, she manages to make learning Serbian much simpler.</q>
                 <div class="testimonial__photo">
                     <img src="https://besthqwallpapers.com/img/original/64294/berger-blanc-suisse-little-white-puppy-portrait-cute-dog-pets.jpg" alt="">
                 </div>
                 <p class="testimonial__name">Igor Rodriguez</p>
             </bloquote>
-            <bloquote class="testimonial">
+            <bloquote class="testimonial" v-scrollanimation>
                 <q class='testimonial__text'>Zlata is able to balance topics in a practical and intuitive way. You realize that she has the gift to teach.</q>
                 <div class="testimonial__photo">
                     <img src="https://www.sheknows.com/wp-content/uploads/2018/08/snxsheng092loz5ecje8.jpeg" alt="">
@@ -28,6 +28,18 @@
 </template>
 
 <style lang="scss" scoped>
+
+    .before-enter{
+        opacity: 0;
+        transform: scale(.5) rotateY(-25deg);
+        transition: all 1s ease-out;
+    }
+
+    .enter{
+        opacity: 1;
+        transform: scale(1) rotateY(0);
+    }
+
     @mixin respond($breakpoint){
         @if $breakpoint == phone {
             @media only screen and (max-width: 37.5em){ @content }; //600px
