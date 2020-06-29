@@ -49,14 +49,22 @@
             @media only screen and (max-width: 75em){ @content }; //1200px
         }
 
+        @if $breakpoint == laptop {
+            @media only screen and (max-width: 90em) {@content}; //1440px
+        }
+
         @if $breakpoint == big-desktop {
             @media only screen and (min-width: 112.5em){ @content }; // + 1800px
         }
     }
 
     #prices{
-        padding: 5% 7%;
+        padding: 5% 3%;
         background-color: rgb(247, 247, 247);
+
+        @include respond(laptop){
+            padding: 5% 4%;
+        }
 
          @include respond(phone){
             padding: 15% 7%;
@@ -68,17 +76,29 @@
         gap: 2rem;
         padding: 2% 5%;
         
+        @include respond(laptop){
+            padding: 5% 0;
+            margin: 0 auto;
+        }
 
          @include respond(tab-land){
            /*   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  */
-             padding: 2% 15%;      
+             padding: 2% 0;      
+             width: 32.5rem;
+             margin: 0 auto;
              display: flex;
              flex-direction: column;
            
         }
 
+         @include respond(tab-port){
+            width: 31rem;
+            padding: 2% 5%;
+        }
+
         @include respond(phone){
             padding: 2% 6%;
+            width: 100%;
         }
     }
     .title{
@@ -137,6 +157,10 @@
                 font-weight: 700;
                 font-size: 2.7rem;
                 margin: 2.5rem; 
+
+                @include respond(laptop){
+                    font-size: 2.4rem;
+                }
 
                 @include respond(phone){
                     font-size: 2rem;
