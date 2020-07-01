@@ -75,20 +75,6 @@ export default {
       right: 2.7rem !important;
       cursor: pointer;
 
-       @include respond(big-desktop){
-            display: block;
-            opacity: 0;   
-        }
-
-     @include respond(desktop){
-            display: block;
-            opacity: 0;      
-        }
-
-     @include respond(phone){
-            display: block;
-            opacity: 1;     
-        }
 }
 
 .bm-burger-bars {
