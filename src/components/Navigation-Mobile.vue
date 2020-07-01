@@ -42,12 +42,10 @@ export default {
 .navigation {
     position: fixed;
     z-index: 3000;
-    top: 1.5rem;
-    right: 2rem;
-    height: 3.75rem;
-    width: 3.75rem;
-    border-radius: 50%;
-    background-color: #fff;
+    height: 5.8rem;
+    
+    width: 100%;
+    background-color: rgba(255,255,255,.9);
     box-shadow: 0 .625rem 1.25rem rgba(#000, .1);
     display: none;
 
@@ -74,7 +72,7 @@ export default {
       top: 2.8rem;
       right: 2.7rem !important;
       cursor: pointer;
-
+      
 }
 
 .bm-burger-bars {
