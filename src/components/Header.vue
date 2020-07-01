@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="header__square"></div>
+        <!-- <div class="header__square"></div> -->
         <div class="header__icons">
             <div class="header__icons--social-medias">
                 <img src="../../public/img/facebook.svg" alt="facebook icon">
@@ -75,7 +75,7 @@
 
         }
 
-        &__square{
+      /*   &__square{
             display: none;
 
 
@@ -88,7 +88,7 @@
                 position: absolute;
                 transform: translateY(8rem) translateX(3.2rem);
             }
-        }
+        } */
 
         &__box{
             grid-column: 8/10;
