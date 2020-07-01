@@ -269,10 +269,11 @@
             }
 
              @include respond(phone){
-                 grid-column: 1/10;
+                 grid-column: 1/12;
                   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(175, 232, 215,.7)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
-                z-index: 5;
-                position: relative;
+                /* z-index: 5;
+                position: relative; */
+                width: 100%;
              }  
 
        

@@ -7,22 +7,23 @@
             </div>
             <div class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
-                <form action="" method="" class="form">
+                <p>Output: {{output}}</p>
+                <form action="" method="" class="form" @submit.prevent="sendData">
                     <ul>
                         <li>
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="user_name" >
+                            <input type="text" id="name" name="user_name" v-model="name">
                         </li>
                         <li>
                             <label for="mail">E-mail</label>
-                            <input type="email" id="mail" name="user_email" >
+                            <input type="email" id="mail" name="user_email" v-model="email">
                         </li>
                         <li>
                             <label for="msg">Message:</label>
-                            <textarea id="msg" name="user_message"></textarea>
+                            <textarea id="msg" name="user_message" v-model="message"></textarea>
                         </li>
                     </ul>
-                    <button class="btn">Send</button>
+                    <button @click="sendData()" class="btn">Send</button>
                 </form>
             </div>
             <div class="box2">
@@ -44,6 +45,24 @@
         </div>
     </section>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+            name: "", 
+            email: "", 
+            message: "",
+            output: ''
+        }
+    },
+    methods: {
+        sendData(){
+            
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 
