@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 import Navigation from './components/Navigation.vue';
 import NavigationMobile from './components/Navigation-Mobile.vue';
 import Header from './components/Header.vue';

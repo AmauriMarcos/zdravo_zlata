@@ -84,19 +84,11 @@ export default {
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0 .625rem 1.25rem rgba(#000, .1);
+    display: none;
 
-     @include respond(big-desktop){
-            display: block;
-            opacity: 0;   
-        }
-
-     @include respond(desktop){
-            display: block;
-            opacity: 0;      
-        }
 
      @include respond(phone){
-            display: block;
+            display: block !important;
             opacity: 1;     
         }
    
