@@ -18,7 +18,7 @@ export default {
     }
 }
 </script>
-<style lang="scss" >
+<style scoped lang="scss" >
 
  @mixin respond($breakpoint){
         @if $breakpoint == phone {
@@ -45,8 +45,8 @@ export default {
     height: 5.8rem;
     
     width: 100%;
-    background-color: rgba(255,255,255,.9);
-    box-shadow: 0 .625rem 1.25rem rgba(#000, .1);
+    /* background-color: rgba(255,255,255,.9); */
+ /*    box-shadow: 0 .625rem 1.25rem rgba(#000, .1); */
     display: none;
 
 
@@ -76,7 +76,7 @@ export default {
 }
 
 .bm-burger-bars {
-      background-color: #030303 !important;
+      background-color: #17909b !important;
     }
    
 .bm-overlay {

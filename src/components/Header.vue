@@ -1,5 +1,6 @@
 <template>
     <header class="header">
+        <div class="header__square"></div>
         <div class="header__icons">
             <div class="header__icons--social-medias">
                 <img src="../../public/img/facebook.svg" alt="facebook icon">
@@ -8,7 +9,7 @@
         </div>
         <div class="header__title" v-scrollanimation>
             <p>Online Course</p>
-            <h1>Zdravo.</h1>
+            <h1>Zravo.</h1>
             <h2>Ja sam Zlata</h2>
         </div>
         <div class="header__image"></div>
@@ -69,8 +70,24 @@
             @include respond(phone){
                 visibility: none;
                 opacity: 0;
+
             }
 
+        }
+
+        &__square{
+            display: none;
+
+
+            @include respond(phone){
+                display: flex;
+                border: 7px solid rgba(0,0,0,.5);
+                width: 80%;
+                height: 32rem;
+                z-index: 2000;
+                position: absolute;
+                transform: translateY(8rem) translateX(3.2rem);
+            }
         }
 
         &__box{
@@ -161,7 +178,7 @@
 
                 @include respond(phone){                    
                     font-size: .9rem;       
-                    color: rgb(245, 245, 245);       
+                    color: rgb(68, 68, 68);       
                 }
             }
             
@@ -191,8 +208,8 @@
                     font-size: 3rem;
                     line-height: 1.2;
                     font-weight: 300;
-                    text-transform: uppercase;
-                    color: rgb(245, 245, 245);
+                  /*   text-transform: uppercase; */
+                    color: rgb(49, 49, 49);
                     
                 }
             }
@@ -223,8 +240,8 @@
                     font-size: 2.3rem;
                     font-weight: 400;
                     line-height: 1.2;
-                    color: rgb(175, 232, 215);
-                    background-color: rgba(235, 235, 235, 0.2);
+                    color: rgb(250, 250, 250);
+                    background-color: rgba(23, 144, 155,.678);;
                     margin-top: 2rem;
                     padding: 1rem 1.4rem;
                 }
@@ -253,7 +270,7 @@
 
              @include respond(phone){
                  grid-column: 1/10;
-                  background-image: linear-gradient(to right bottom, rgba(14, 13, 13, 0.9), rgba(2, 1, 1, 0.8)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
+                  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(175, 232, 215,.7)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
                 z-index: 5;
                 position: relative;
              }  
