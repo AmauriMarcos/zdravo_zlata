@@ -27,20 +27,19 @@
 </template>
 <script>
 export default {
-    mounted(){
-        const items = document.querySelectorAll(".navigation__item");
-        const checkbox = document.querySelectorAll(".navigation__list");
-        const list = document.querySelectorAll(".navigation__list");
+    data(){
+        return{
+          
+        }
+    },
+    watch: {
 
-        items.forEach((item) => {
-            item.addEventListener('click', () =>{
-                checkbox.checked = false
-                if(checkbox.checked === false){
-                   list.classList.add("hidden");
-                }
-            })
-        })
-        
+    },
+    methods:{
+ 
+    },
+    mounted(){ 
+       
     }
 }
 </script>
@@ -64,10 +63,15 @@ export default {
         }
     }
 
- .hidden{
-    background: pink;
-    display: none;
- } 
+ .background{
+     background: radial-gradient(rgb(175, 232, 215), rgb(23, 144, 155));
+     transform: scale(80);
+} 
+
+ .nav{
+     opacity: 1;
+     width: 100%; 
+ }
 
 .navigation {
     display: none;
