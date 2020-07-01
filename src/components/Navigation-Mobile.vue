@@ -1,55 +1,20 @@
 <template>
     <div class="navigation">
-        <Slide slide right
+        <PushRotate ScaleDown right
                :closeOnNavigation="true" 
         >
             <router-link tag='a' to='#header' >Home</router-link>
             <router-link tag='a' to='#about' >About</router-link>
             <router-link tag='a' to='#prices' >Plans</router-link>
             <router-link tag='a' to='#contact' >Contact</router-link>
-        </Slide>
-    </div>
-    
-    <!-- <div class="navigation">
-        <nav class="navigation__nav">
-            <ul class="navigation__list">
-                <li class="navigation__item" >
-                    <router-link class="navigation__link" tag='a' to='#header' exact-active-class="active">Home</router-link>
-                </li>
-                <li class="navigation__item">
-                    <router-link class="navigation__link" tag='a' to='#about' exact-active-class="active">About</router-link>
-                </li>
-                <li class="navigation__item">
-                    <router-link class="navigation__link" tag='a' to='#prices' exact-active-class="active">Plans</router-link>
-                </li>
-                <li class="navigation__item">
-                    <router-link class="navigation__link" tag='a' to='#contact' exact-active-class="active">Contact</router-link>
-                </li>
-            </ul>
-        </nav>
-    </div> -->
-     
-     
+        </PushRotate>
+    </div>   
 </template>
 <script>
-import { Slide } from 'vue-burger-menu';
+import { PushRotate } from 'vue-burger-menu';
 export default {
     components: {
-        Slide
-    },
-    data(){
-        return{
-          
-        }
-    },
-    watch: {
-
-    },
-    methods:{
- 
-    },
-    mounted(){ 
-       
+        PushRotate
     }
 }
 </script>

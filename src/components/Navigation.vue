@@ -7,7 +7,7 @@
             </div>
             <ul class="list">
                 <li>
-                     <router-link tag='a' to='#header' exact-active-class="active">Home</router-link>
+                     <router-link tag='a' to='#header' exact exact-active-class="active">Home</router-link>
                 </li>
                 <li>
                     <router-link tag='a' to='#about' exact-active-class="active">About me</router-link>
