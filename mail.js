@@ -10,24 +10,21 @@ const auth= {
 
 const transporter = nodemailer.createTransport(mg(auth));
 
-/* const sendMail = (name, email, text, cb) => { */
+const sendMail = (name, email, text, cb) => {
     
     const mailOptions = {
-        from: 'amaury_santos_22@hotmail.com',
+        from: email,
         to: 'amaurisantos.m@gmail.com',
-        subject: 'N Serbian Lessons',
-        text: 'Aulas de servio'
+        subject: `Name: ${name} || Serbian Lessons`,
+        text: text
     }
 
-    transporter.sendMail(mailOptions, (err, data) => {
-        if(err){
-            console.log(err);
-        }else {
-            console.log('SENT!!!')
-        }
+    transporter.sendMail(mailOptions).then(function(info){
+        console.log(info);
+    }).catch(function(err){
+        console.log(err);
     });
 
-/* } */
+}
 
-/* 
-module.exports = sendMail; */
+module.exports = sendMail;

@@ -20,18 +20,17 @@ app.post("/", function(req, res) {
     res.sendfile(__dirname + '/dist/index.html');
     console.log(req.body);
     const name = req.body.name;
-    const email = req.body.name;
-    const text = req.body.text;
+    const email = req.body.email;
+    const text = req.body.message;
 
-    /* sendMail(name, email, text, (err, data) =>{
+    sendMail(name, email, text, function(err, data){
         if(err){
             res.status(500).json({message: 'internal error'});
-           console.log(err);
+          
         }else{
             res.json({message: 'Email sent!!!'});
-           console.log(data)
         }
-    }); */
+    });
 
 })
 
