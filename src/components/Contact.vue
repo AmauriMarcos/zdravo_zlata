@@ -7,8 +7,7 @@
             </div>
             <div class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
-                <p>Output: {{output}}</p>
-                <form action="" method="" class="form" @submit.prevent="sendData">
+                <form action="http://localhost:3000/" method="POST" class="form" @submit.prevent="sendData">
                     <ul>
                         <li>
                             <label for="name">Name</label>
@@ -23,7 +22,7 @@
                             <textarea id="msg" name="user_message" v-model="message"></textarea>
                         </li>
                     </ul>
-                    <button @click="sendData()" class="btn">Send</button>
+                    <button type="submit" class="btn">Send</button>
                 </form>
             </div>
             <div class="box2">
@@ -47,19 +46,30 @@
 </template>
 
 <script>
+import * as axios from 'axios';
 export default {
     data(){
         return{
             name: "", 
             email: "", 
-            message: "",
-            output: ''
+            message: ""
         }
     },
     methods: {
-        sendData(){
-            
-        }
+       sendData(){
+           console.log(this.name, this.email,this.message);
+           axios.post("http://localhost:3000/",{
+               name: this.name,
+               email: this.email,
+               message: this.message
+           })
+         .then(response => {
+            console.log(response)
+         })
+         .catch(error =>{
+            this.error = error;
+         }) 
+       }
     }
 }
 </script>

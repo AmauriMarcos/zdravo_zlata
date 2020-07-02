@@ -3,7 +3,7 @@
         <PushRotate ScaleDown right
                :closeOnNavigation="true" 
         >
-            <router-link tag='a' to='#header' >Home</router-link>
+            <router-link tag='a' to='/#/' >Home</router-link>
             <router-link tag='a' to='#about' >About</router-link>
             <router-link tag='a' to='#prices' >Plans</router-link>
             <router-link tag='a' to='#contact' >Contact</router-link>
