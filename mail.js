@@ -15,7 +15,7 @@ const sendMail = (name, email, text, cb) => {
     
     const mailOptions = {
         from: email,
-        to: 'amaurisantos.m@gmail.com',
+        to: process.env.PERSONAL_EMAIL,
         subject: `Name: ${name} || Serbian Lessons`,
         text: text
     }
