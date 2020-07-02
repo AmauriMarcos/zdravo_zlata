@@ -5,6 +5,9 @@ const cors = require('cors');
 const sendMail = require('./mail');
 const SendmailTransport = require('nodemailer/lib/sendmail-transport');
 const app = express();
+
+
+
 app.use(cors())
 
 app.use(bodyParser.urlencoded({ extended: false }))
