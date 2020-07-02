@@ -7,7 +7,7 @@
             </div>
             <div class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
-                <form action="http://localhost:3000/" method="POST" class="form" @submit.prevent="sendData">
+                <form class="form" @submit.prevent="sendData">
                     <ul>
                         <li>
                             <label for="name">Name</label>
