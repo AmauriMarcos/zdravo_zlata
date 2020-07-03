@@ -4,7 +4,7 @@ const mg = require('nodemailer-mailgun-transport');
 
 const auth= {
     auth:{
-        api_key: process.env.KEY,
+        api_key: process.env.API_KEY,
         domain: process.env.DOMAIN
     }
 }
