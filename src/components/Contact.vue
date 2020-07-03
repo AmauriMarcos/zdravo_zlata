@@ -5,7 +5,11 @@
             <div class="message">
                 <p><span class="main-color">Let's</span> <span class="main-color">learn</span> <span>Serbian</span></p>
             </div>
-            <div class="box1" v-scrollanimation>
+            <div v-if='isSubmit'  class="box1 box1-succesfull" v-scrollanimation>
+                <h2>Thank You !!</h2>
+                <p>I'll contact you within 24 hours.</p>
+            </div>
+            <div v-if='!isSubmit'  class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
                 <form class="form" @submit.prevent="sendData">
                     <ul>
@@ -52,7 +56,8 @@ export default {
         return{
             name: "", 
             email: "", 
-            message: ""
+            message: "",
+            isSubmit: false
         }
     },
     methods: {
@@ -69,13 +74,17 @@ export default {
          .catch(error =>{
             this.error = error;
          }) 
+
+         this.isSubmit = true;
        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-
+    .box1-succesfull{
+        color: rgb(8, 187, 8);
+    }
     .before-enter{
         opacity: 0;
         transform: translateY(-100px);
@@ -85,6 +94,10 @@ export default {
     .enter{
         opacity: 1;
         transform: translateY(0);
+    }
+
+     textarea{
+        resize: vertical;
     }
 
     @mixin respond($breakpoint){

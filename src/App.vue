@@ -2,10 +2,10 @@
     <div class="container">
         <app-navigation></app-navigation>
         <app-navMobile></app-navMobile>
-        <app-header id="header"></app-header>    
-        <app-about id="about" hash='about'></app-about>       
+        <app-header id='header'></app-header>    
+        <app-about id='about'></app-about>       
         <app-elements></app-elements>
-        <app-prices id="prices"></app-prices>
+        <app-prices id='prices'></app-prices>
         <app-testimonials></app-testimonials>
         <app-contact id="contact"></app-contact>
         <app-footer></app-footer>

@@ -22,9 +22,9 @@ app.use(express.static(__dirname + "/dist/"));
 app.post("/", function(req, res) {
     res.sendfile(__dirname + '/dist/index.html');
     console.log(req.body);
-    const {name, email, text} = req.body;
+    const {name, email, message} = req.body;
    
-    sendMail(name, email, text, function(err, data){
+    sendMail(name, email, message, function(err, data){
         if(err){
             res.status(500).json({message: 'Internal error'});
           
