@@ -6,7 +6,7 @@ const sendMail = require('./mail');
 const SendmailTransport = require('nodemailer/lib/sendmail-transport');
 const app = express();
 
-
+require('dotenv').config()
 
 app.use(cors())
 
