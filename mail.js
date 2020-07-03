@@ -4,7 +4,7 @@ const mg = require('nodemailer-mailgun-transport');
 
 const auth= {
     auth:{
-        api_key: process.env.API_KEY,
+        api_key: process.env.KEY,
         domain: process.env.DOMAIN
     }
 }
@@ -17,7 +17,7 @@ const sendMail = (name, email, text, cb) => {
         from: email,
         to: process.env.PERSONAL_EMAIL,
         subject: `Name: ${name} || Serbian Lessons`,
-        text: text
+        text
     }
 
     transporter.sendMail(mailOptions).then(function(info){
