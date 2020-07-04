@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const port = process.env.PORT || 3000;
 const cors = require('cors');
-const sendMail2 = require('./mail2');
+const sendMail = require('./mail');
 const app = express();
 
 require('dotenv').config()
@@ -23,7 +23,7 @@ app.post("/", function(req, res) {
     console.log(req.body);
     const {name, email, message} = req.body;
    
-    sendMail2(name, email, message, function(err, data){
+    sendMail(name, email, message, function(err, data){
         if(err){
             res.status(500).json({message: 'Internal error'});
           
