@@ -83,23 +83,22 @@ export default {
         )
         .join("&");
     },
-    handleSubmit () {
-      const axiosConfig = {
-        header: { "Content-Type": "application/x-www-form-urlencoded" }
-      };
-      axios.post(
-        "/",
-        this.encode({
-          "form-name": "contact",
-          ...this.form
-        }),
-        axiosConfig
-        
-      );
-
-      this.isSubmit = true;
-      console.log(this.form);
-    }
+    handleFormSubmit(event) {
+        event.preventDefault();
+        const data = [...event.target.elements]
+            .filter(element => Boolean(element.name))
+            .reduce((json, element) => {
+            json[element.name] = element.value;
+            return json;
+            }, {});
+        fetch(event.target.action, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode(data),
+        })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+        }
   }
 }
 </script>
