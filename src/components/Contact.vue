@@ -21,7 +21,7 @@
                       @submit.prevent="handleSubmit"
                 >
             
-                    <label>Don't fill this out if you're a human: 
+                    <label style="display: none;">Don't fill this out if you're a human: 
                         <input type="hidden" value="contact" name="bot-field"/>
                     </label>
                    
