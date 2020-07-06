@@ -20,9 +20,11 @@
                       name="contact" 
                       @submit.prevent="handleSubmit"
                 >
-                     <p style="display: none;" class="hidden">
-                        <label>Don't fill this out if you're a human: <input name="bot-field"/></label>
-                    </p>
+            
+                    <label>Don't fill this out if you're a human: 
+                        <input type="hidden" value="contact" name="bot-field"/>
+                    </label>
+                   
                     <ul>
                         <li>
                             <label for="name">Name</label>
