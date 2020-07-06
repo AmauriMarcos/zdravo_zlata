@@ -1,4 +1,4 @@
-/* const express = require('express');
+const express = require('express');
 const bodyParser = require('body-parser')
 const port = process.env.PORT || 3000;
 const cors = require('cors');
@@ -38,4 +38,4 @@ app.post("/", function(req, res) {
 app.listen(port);
 
 console.log('Server started on port 3000...');
- */
+ 
