@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import * as axios from 'axios';
+/* import * as axios from 'axios'; */
 export default {
     data(){
         return{
@@ -76,28 +76,24 @@ export default {
         }
     },
     methods: {
-    encode (data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-    },
-    handleFormSubmit(event) {
-        event.preventDefault();
-        const data = [...event.target.elements]
-            .filter(element => Boolean(element.name))
-            .reduce((json, element) => {
-            json[element.name] = element.value;
-            return json;
-            }, {});
-        fetch(event.target.action, {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode(data),
-        })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
+        encode(data){
+            return Object.keys(data)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+            .join('&')
+        },
+        handleSubmit(){
+            fetch('/', {
+                method: 'post',
+                headers: {
+                    'Content-type': 'application/x-www-form-urlencoded'
+                },
+                body: this.encode({
+                    'form-name': 'contact',
+                    ...this.form
+                })
+            })
+            .then(() => console.log('Finally !!!!'))
+            .catch((err) => console.log(`Error: ${err}`));
         }
   }
 }
