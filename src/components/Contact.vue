@@ -14,16 +14,13 @@
                 <form action="/" 
                       data-netlify="true"
                       netlify-honeypot="bot-field" 
-                      hidden  
                       class="form" 
                       method="post"  
                       name="contact" 
                       @submit.prevent="handleSubmit"
                 >
             
-                    <label style="display: none;">Don't fill this out if you're a human: 
-                        <input type="hidden" value="contact" name="bot-field"/>
-                    </label>
+                    <input type="hidden" name="form-name" value="contact" />
                    
                     <ul>
                         <li>

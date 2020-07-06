@@ -16,26 +16,13 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <form name="contact" hidden action='/' method="POST" netlify-honeypot="bot-field" data-netlify="true" @submit.prevent="handleSubmit">
-      <p class="hidden">
-        <label>Don't fill this out if you're a human: <input value="contact" name="bot-field"/></label>
-      </p>
-        <ul>
-            <li>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" v-model="name">
-            </li>
-            <li>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" v-model="email">
-            </li>
-            <li>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" v-model="message"></textarea>
-            </li>
-        </ul>
-        <button type="submit" class="btn">Send</button>
+
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
     </form>
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
