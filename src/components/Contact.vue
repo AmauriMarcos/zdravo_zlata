@@ -5,11 +5,15 @@
             <div class="message">
                 <p><span class="main-color">Let's</span> <span class="main-color">learn</span> <span>Serbian</span></p>
             </div>
-            <div v-if='isSubmit'  class="box1 box1-succesfull" v-scrollanimation>
-                <h2>Thank You !!</h2>
-                <p>I'll contact you within 24 hours.</p>
+            <div v-if='!isSubmit'  class="box1 box1-succesfull" v-scrollanimation>
+                <div class="box1-succesfull__image"></div>
+                <div class="box1-succesfull__icon">
+                    <img src="../../public/img/success.svg" alt="success submit form">
+                </div>
+                <h2 class="box1-succesfull__title">Thanks for being awesome!</h2>
+                <p class="box1-succesfull__text">Your message has been successfully sent. I will contact you very soon!</p>
             </div>
-            <div v-if='!isSubmit'  class="box1" v-scrollanimation>
+            <div v-if='isSubmit'  class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
                 <form action="/" 
                       data-netlify="true"
@@ -103,6 +107,47 @@ export default {
 <style lang="scss" scoped>
     .box1-succesfull{
         color: rgb(8, 187, 8);
+        height: 31.06rem;
+        display: grid;
+        padding: 0 !important;
+        justify-items: center;
+        align-items: center;
+
+        &__image{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            z-index: 5;
+            position: relative;
+            background-image: linear-gradient(to right bottom, rgba(191, 245, 198, 0.8), rgba(155, 226, 176, 0.8)), url(https://ak.picdn.net/shutterstock/videos/8555707/thumb/9.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &__icon{
+            grid-column: 1/2;
+            width: 5.5rem;
+            height: 5.5rem;
+            grid-row: 1/2;
+            z-index: 500;
+            position: relative;
+        }
+
+        &__title{
+            grid-column: 1/2;
+            grid-row:2/3;
+            height: 5px;
+            font-size: 1.7rem;
+            padding: 0 2.5rem;
+        }
+
+        &__text{
+             grid-column: 1/2;
+            grid-row:3/4;
+            padding:  0 2.5rem;
+        }
     }
     .before-enter{
         opacity: 0;
