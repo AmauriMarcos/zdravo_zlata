@@ -11,9 +11,31 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    
+
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <form name="contact" hidden method="POST" netlify-honeypot="bot-field" data-netlify="true" @submit.prevent="sendData">
+      <p class="hidden">
+        <label>Don't fill this out if you're a human: <input name="bot-field"/></label>
+      </p>
+        <ul>
+            <li>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="user_name" v-model="name">
+            </li>
+            <li>
+                <label for="mail">E-mail</label>
+                <input type="email" id="mail" name="user_email" v-model="email">
+            </li>
+            <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message" v-model="message"></textarea>
+            </li>
+        </ul>
+        <button type="submit" class="btn">Send</button>
+    </form>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
