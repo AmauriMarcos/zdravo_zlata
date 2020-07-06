@@ -5,7 +5,7 @@
             <div class="message">
                 <p><span class="main-color">Let's</span> <span class="main-color">learn</span> <span>Serbian</span></p>
             </div>
-            <div v-if='!isSubmit'  class="box1 box1-succesfull" v-scrollanimation>
+            <div v-if='isSubmit'  class="box1 box1-succesfull" v-scrollanimation>
                 <div class="box1-succesfull__image"></div>
                 <div class="box1-succesfull__icon">
                     <img src="../../public/img/success.svg" alt="success submit form">
@@ -13,7 +13,7 @@
                 <h2 class="box1-succesfull__title">Thanks for being awesome!</h2>
                 <p class="box1-succesfull__text">Your message has been successfully sent. I will contact you very soon!</p>
             </div>
-            <div v-if='isSubmit'  class="box1" v-scrollanimation>
+            <div v-if='!isSubmit'  class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
                 <form action="/" 
                       data-netlify="true"
