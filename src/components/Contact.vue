@@ -89,8 +89,12 @@ export default {
                     ...this.form
                 })
             })
-            .then(() => console.log('Finally !!!!'))
+            .then(() =>{
+                this.isSubmit = true;
+                console.log('Message sent!')
+            })
             .catch((err) => console.log(`Error: ${err}`));
+            
         }
   }
 }
