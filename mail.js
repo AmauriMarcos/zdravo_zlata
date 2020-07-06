@@ -1,4 +1,4 @@
-require('dotenv').config()
+/* require('dotenv').config()
 const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
 
@@ -28,4 +28,4 @@ const sendMail = (name, email, text, cb) => {
 
 }
 
-module.exports = sendMail;
+module.exports = sendMail; */

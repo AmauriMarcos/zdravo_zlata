@@ -1,4 +1,4 @@
-const sgMail = require('@sendgrid/mail');
+/* const sgMail = require('@sendgrid/mail');
 require('dotenv').config()
 
 sgMail.setApiKey(process.env.PASSWORD);
@@ -16,4 +16,4 @@ sgMail.send(msg).then(() => {
 }).catch((error) => {
     console.log(error.response.body)
     // console.log(error.response.body.errors[0].message)
-})
+}) */

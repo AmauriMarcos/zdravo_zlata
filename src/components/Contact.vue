@@ -11,7 +11,7 @@
             </div>
             <div v-if='!isSubmit'  class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
-                <form  class="form" action="POST" data-netlify="true" name="contact" @submit.prevent="handleSubmit">
+                <form action="/"  class="form" method="POST" data-netlify="true" name="contact" @submit.prevent="handleSubmit">
                      <p style="display: none;" class="hidden">
                         <label>Don't fill this out if you're a human: <input name="bot-field"/></label>
                     </p>
@@ -21,12 +21,12 @@
                             <input type="text" id="name" name="name" v-model="form.name">
                         </li>
                         <li>
-                            <label for="mail">E-mail</label>
-                            <input type="email" id="mail" name="email" v-model="form.email">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" v-model="form.email">
                         </li>
                         <li>
-                            <label for="msg">Message:</label>
-                            <textarea id="msg" name="message" v-model="form.message"></textarea>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" v-model="form.message"></textarea>
                         </li>
                     </ul>
                     <button type="submit" class="btn">Send</button>
