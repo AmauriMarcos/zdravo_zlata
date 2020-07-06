@@ -11,22 +11,22 @@
             </div>
             <div v-if='!isSubmit'  class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
-                <form class="form" action="POST" data-netlify="true" name="contact" @submit.prevent="sendData">
+                <form class="form" action="POST" data-netlify="true" name="contact" @submit.prevent="handleSubmit">
                      <p style="display: none;" class="hidden">
                         <label>Don't fill this out if you're a human: <input name="bot-field"/></label>
                     </p>
                     <ul>
                         <li>
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="user_name" v-model="name">
+                            <input type="text" id="name" name="user_name" v-model="form.name">
                         </li>
                         <li>
                             <label for="mail">E-mail</label>
-                            <input type="email" id="mail" name="user_email" v-model="email">
+                            <input type="email" id="mail" name="user_email" v-model="form.email">
                         </li>
                         <li>
                             <label for="msg">Message:</label>
-                            <textarea id="msg" name="user_message" v-model="message"></textarea>
+                            <textarea id="msg" name="user_message" v-model="form.message"></textarea>
                         </li>
                     </ul>
                     <button type="submit" class="btn">Send</button>
@@ -57,30 +57,36 @@ import * as axios from 'axios';
 export default {
     data(){
         return{
-            name: "", 
-            email: "", 
-            message: "",
+            form: {
+                name: '',
+                email: '',
+                message: ''
+            },
             isSubmit: false
         }
     },
     methods: {
-       sendData(){
-           console.log(this.name, this.email,this.message);
-           axios.post("http://localhost:3000/",{
-               name: this.name,
-               email: this.email,
-               message: this.message
-           })
-         .then(response => {
-            console.log(response)
-         })
-         .catch(error =>{
-            this.error = error;
-         }) 
-
-         this.isSubmit = true;
-       }
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit () {
+      const axiosConfig = {
+        header: { "Content-Type": "application/x-www-form-urlencoded" }
+      };
+      axios.post(
+        "/",
+        this.encode({
+          "form-name": "contact",
+          ...this.form
+        }),
+        axiosConfig
+      );
     }
+  }
 }
 </script>
 
