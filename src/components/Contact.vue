@@ -84,7 +84,10 @@ export default {
           ...this.form
         }),
         axiosConfig
+        
       );
+
+      this.isSubmit = true;
     }
   }
 }
