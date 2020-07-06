@@ -18,7 +18,7 @@ app.use(express.static(__dirname + "/dist/"));
     res.sendfile(__dirname + '/dist/index.html');  
 })
  
-app.post("/", function(req, res) {
+app.post("https://www.arfildev.com/", function(req, res) {
     res.sendfile(__dirname + '/dist/index.html');
     console.log(req.body);
     const {name, email, message} = req.body;
