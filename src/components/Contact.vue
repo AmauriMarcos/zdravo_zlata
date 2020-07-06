@@ -88,6 +88,7 @@ export default {
       );
 
       this.isSubmit = true;
+      console.log(this.form);
     }
   }
 }
