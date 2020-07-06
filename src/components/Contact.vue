@@ -11,7 +11,7 @@
             </div>
             <div v-if='!isSubmit'  class="box1" v-scrollanimation>
                 <h3>Send me a message</h3>
-                <form netlify class="form" action="POST" data-netlify="true" name="contact" @submit.prevent="handleSubmit">
+                <form  class="form" action="POST" data-netlify="true" name="contact" @submit.prevent="handleSubmit">
                      <p style="display: none;" class="hidden">
                         <label>Don't fill this out if you're a human: <input name="bot-field"/></label>
                     </p>
