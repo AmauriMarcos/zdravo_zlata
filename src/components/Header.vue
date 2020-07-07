@@ -1,15 +1,16 @@
 <template>
     <header class="header">
         <!-- <div class="header__square"></div> -->
-        <div class="header__icons">
+   
+       <!--  <div class="header__icons">
             <div class="header__icons--social-medias">
                 <img src="../../public/img/facebook.svg" alt="facebook icon">
                 <img src="../../public/img/instagram2.svg" alt="instagram icon">
             </div>        
-        </div>
+        </div> -->
         <div class="header__title" v-scrollanimation>
             <p>Online Course</p>
-            <h1>Hello.</h1>
+            <h1>Zdravo.</h1>
             <h2>Ja sam Zlata</h2>
         </div>
         <div class="header__image"></div>
@@ -53,6 +54,9 @@
         grid-template-rows: repeat(3, 1fr);
         align-items: center;
         border-right: 1px solid #ccc;
+        position: relative;
+        z-index: 5;
+
 
          &__textura{
             grid-column: 10/11;
@@ -170,7 +174,7 @@
 
             & p{
                 font-size: 1.3rem;
-                font-weight: 700;
+                font-weight: 600;
 
                 @include respond(tab-land){
                   font-size: 1rem;
@@ -251,8 +255,8 @@
         &__image{
             grid-column: 8/10;
             grid-row: 1/4;
-            background-image: url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
-            background-size: cover;
+            background-image: url("../../public/img/Artboard.png");
+          /*   background-size: cover; */
             background-repeat: no-repeat;
             background-position: center;
             height: 95vh;
@@ -270,14 +274,11 @@
 
              @include respond(phone){
                  grid-column: 1/12;
-                  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(175, 232, 215,.7)), url(https://i.pinimg.com/originals/99/71/fb/9971fbbf212f28e6b062b8861a90ff24.jpg);
+                  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(175, 232, 215,.7)), url("../../public/img/Artboard.png");
                 /* z-index: 5;
                 position: relative; */
                 width: 100%;
              }  
-
-       
-
         
     }
 

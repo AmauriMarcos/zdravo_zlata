@@ -64,7 +64,7 @@
 </template>
 
 <script>
-/* import * as axios from 'axios'; */
+
 export default {
     data(){
         return{
@@ -122,7 +122,7 @@ export default {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            width: 105%;
+            width: 100%;
             height: 100%;
         }
 

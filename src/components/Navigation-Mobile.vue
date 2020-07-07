@@ -1,5 +1,6 @@
 <template>
-    <div class="navigation">
+    <div>
+        <div class="navigation">
         <PushRotate ScaleDown right
                :closeOnNavigation="true" 
         >
@@ -8,7 +9,8 @@
             <router-link tag='a' to='#prices' >Plans</router-link>
             <router-link tag='a' to='#contact' >Contact</router-link>
         </PushRotate>
-    </div>   
+        </div>  
+    </div>  
 </template>
 <script>
 import { PushRotate } from 'vue-burger-menu';

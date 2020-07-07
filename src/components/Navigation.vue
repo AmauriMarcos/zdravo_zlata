@@ -1,7 +1,6 @@
 <template>  
         <div class="navigation-bar">
             <div class="brand">
-                <!-- <img src="../public/img/ser.svg" alt="Serbia flag"> -->
                 <p>Uči </p>
                 <p>Srpski</p>
             </div>
@@ -47,9 +46,7 @@ export default {
             @media only screen and (min-width: 112.5em){ @content }; // + 1800px
         }
     }
-
-
-    
+  
     .active::after{
         content: '';
         display: block;
@@ -123,15 +120,18 @@ export default {
             
         } 
 
+
         & p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 600;
+            color: #fff;
             margin: .15rem;
+            font-family: 'Pacifico', cursive;
 
             @include respond(phone){
                 font-size: .8rem;
                 font-weight: 400;
-                color: #fff;
+                
             } 
         }
     }
