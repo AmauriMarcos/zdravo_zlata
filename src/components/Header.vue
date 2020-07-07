@@ -284,7 +284,7 @@
                   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(175, 232, 215,.7)), url("../../public/img/Artboard.png");
                 /* z-index: 5;
                 position: relative; */
-               /*  width: 100%; */
+                width: 100%;
              }  
         
     }

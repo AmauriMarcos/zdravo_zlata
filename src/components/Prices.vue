@@ -1,5 +1,5 @@
 <template>
-    <section id="prices">
+    <section id="plans">
         <h2 class="title">Princing Options</h2>
         <div class="prices">
             <div class="card card-1" v-scrollanimation>
