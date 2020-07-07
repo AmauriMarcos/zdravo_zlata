@@ -97,6 +97,7 @@
                          display: flex;
                          justify-content: center;
                          align-items: center;
+                         padding-top: 2rem;
                      } 
                 
                 & img{
@@ -119,6 +120,7 @@
 
             &--right{
                 width: 400px;
+              
 
                 @include respond(tab-land){
                     padding: 2rem;
@@ -132,7 +134,8 @@
                 @include respond(phone){
                     display: flex;
                     flex-direction: column;
-                    width: 100%
+                    width: 100%;
+                      padding-bottom: 2rem;
                 }
 
                 & p{
@@ -192,6 +195,9 @@
                         font-size: .8rem;
                         padding: .8rem 1.2rem;
                         margin: 2rem auto;
+                       /*  display: none; */
+                       z-index: 5000;
+                       position: relative;
                     }
 
                     & span{

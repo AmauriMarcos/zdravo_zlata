@@ -94,8 +94,14 @@ export default {
                 })
             })
             .then(() =>{
-                this.isSubmit = true;
-                console.log('Message sent!')
+                if (this.form.message === "" || this.form.name === '' || this.form.email === '') {
+                    alert("Missing one or more information ");
+                    return false;
+                }else{
+                     this.isSubmit = true;
+                     console.log('Message sent!')
+                }
+               
             })
             .catch((err) => console.log(`Error: ${err}`));
             
