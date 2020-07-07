@@ -95,11 +95,11 @@ export default {
             })
             .then(() =>{
                 if (this.form.message === "" || this.form.name === '' || this.form.email === '') {
-                    alert("Missing one or more information ");
+                    alert('Please fill in all required fields');
                     return false;
                 }else{
                      this.isSubmit = true;
-                     console.log('Please fill in all required fields')
+                     console.log('Message sent!')
                 }
                
             })
