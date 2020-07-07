@@ -15,7 +15,9 @@
         </div>
         <div class="header__image"></div>
         <div class="header__textura"></div>
-        <div class="header__box">Explore the new look</div>
+        <div class="header__box">
+            <p>Explore your potencial</p>
+        </div>
     </header>
 </template>
 <style lang="scss" scoped>
@@ -107,6 +109,11 @@
             padding: 1rem;   
             z-index: 55;
             position: relative;
+
+            & p{
+                margin-top: 1rem;
+                line-height: 1.5;
+            }
             
 
             @include respond(tab-land){                    
@@ -277,7 +284,7 @@
                   background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.9), rgba(175, 232, 215,.7)), url("../../public/img/Artboard.png");
                 /* z-index: 5;
                 position: relative; */
-                width: 100%;
+               /*  width: 100%; */
              }  
         
     }
