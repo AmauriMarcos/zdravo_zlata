@@ -94,15 +94,9 @@ export default {
                 })
                 
             })
-            .then(() =>{
-                if (this.form.message === "" || this.form.name === '' || this.form.email === '') {
-                    alert('Please fill in all required fields');
-                    return false;
-                }else{
-                     this.isSubmit = true;
-                     console.log('Message sent!')
-                }
-               
+            .then(() =>{                         
+                this.isSubmit = true;
+                console.log('Message sent!')                 
             })
             .catch((err) => console.log(`Error: ${err}`));
             
