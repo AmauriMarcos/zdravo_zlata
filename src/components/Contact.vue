@@ -99,7 +99,7 @@ export default {
                     return false;
                 }else{
                      this.isSubmit = true;
-                     console.log('Message sent!')
+                     console.log('Please fill in all required fields')
                 }
                
             })
