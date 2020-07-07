@@ -86,8 +86,8 @@ export default {
              if (this.form.message === "" || this.form.name === '' || this.form.email === '') {
                     alert('Please fill in all required fields');
                     return false;
-                }
-            fetch('/', {
+                }else {
+                     fetch('/', {
                 method: 'post',
                 headers: {
                     'Content-type': 'application/x-www-form-urlencoded'
@@ -97,14 +97,14 @@ export default {
                     ...this.form
                 })
                 
-            })
-            .then(() =>{    
+            }) .then(() =>{    
                 this.isSubmit = true;
                 console.log('Message sent!')                 
             })
             .catch((err) => console.log(`Error: ${err}`));
+        }       
             
-        }
+    }
   }
 }
 </script>
