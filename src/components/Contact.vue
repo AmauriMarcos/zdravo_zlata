@@ -122,7 +122,7 @@ export default {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            width: 100%;
+            width: 105%;
             height: 100%;
         }
 
