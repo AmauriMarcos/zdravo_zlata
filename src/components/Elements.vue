@@ -10,7 +10,7 @@
             </div>
 
             <div class="elements__photo" v-scrollanimation>
-                <img src="../../public/img/lindinha.JPG" alt="">
+                <img src="../../public/img/lindinha.jpg" alt="">
             </div>
        </div>
     </section>
