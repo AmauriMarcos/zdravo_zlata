@@ -10,7 +10,7 @@
             </div>
 
             <div class="elements__photo" v-scrollanimation>
-                <img src="https://scontent.fbeg7-1.fna.fbcdn.net/v/t1.15752-9/105519888_1049727992088147_1053918515766314422_n.jpg?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=G-NWGe4jX4sAX8LL6VD&_nc_ht=scontent.fbeg7-1.fna&oh=b74d145269a2cb257618029434d435dc&oe=5F1A22E3" alt="">
+                <img src="https://scontent.fbeg7-1.fna.fbcdn.net/v/t1.0-9/76730662_2556142251136239_5790573572455923712_o.jpg?_nc_cat=102&_nc_sid=84a396&_nc_ohc=Gc8i5UdgpRkAX-CkAnc&_nc_ht=scontent.fbeg7-1.fna&oh=c31d86e63f3cb2c5e8feb9b82b30ab17&oe=5F3A481A" alt="">
             </div>
        </div>
     </section>

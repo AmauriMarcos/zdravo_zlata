@@ -11,7 +11,7 @@
         <div class="header__title" v-scrollanimation>
             <p>Online Course</p>
             <h1>Zdravo.</h1>
-            <h2>Ja sam Zlata</h2>
+            <h2>Ja sam Izabela</h2>
         </div>
         <div class="header__image"></div>
         <div class="header__textura"></div>

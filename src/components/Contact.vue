@@ -47,15 +47,15 @@
                 <div class="infos">
                     <div class="info info__address">
                         <img src="../../public/img/map.svg" alt="icon map">
-                        <p>Bulevar Cara Konstantina, broj 7</p>
+                        <p>Bulevar Teodore, 503</p>
                     </div>
                     <div class="info info__phone">
                         <img src="../../public/img/phone.svg" alt="icon phone">
-                        <p>+55 381 555 283</p>
+                        <p>+381 18 555 555</p>
                     </div>
                     <div class="info info__email">
                         <img src="../../public/img/mail.svg" alt="icon mail">
-                        <p>zlata.learn.servio@gmail.com</p>
+                        <p>izza.classes@gmail.com</p>
                     </div>
                 </div>
             </div>
