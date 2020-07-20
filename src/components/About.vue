@@ -7,7 +7,7 @@
                 </div>  
                 <div class="about__content--right" v-scrollanimation>
                     <h2>About me</h2>
-                    <p>Hello, my name is Zlata, I live in the city of Nis in Serbia and I have a degree in Serbian literature. I love teaching and I also like all star, skate and good music. It will be a pleasure to help you to learn the Serbian language. <span>Ready to start?</span></p>
+                    <p>Hello, my name is Izza, I live in the city of Nis in Serbia and I have a degree in Serbian literature. I love teaching and I also like cakes and pizza. It will be a pleasure to help you to learn the Serbian language. <span>Ready to start?</span></p>
                     <router-link tag='button' to='#contact' exact-active-class="active">Send a message <span>&rarr;</span></router-link>
                     <!-- <button>Send a message <span>&rarr;</span> </button> -->
                 </div>
