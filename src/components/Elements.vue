@@ -141,7 +141,7 @@
                 width: 10rem;
                 height: 10rem;
                 transform: translateX(.5rem) translateY(5rem);
-                z-index: 55;
+                z-index: 65;
                 position: relative;
             }
 
